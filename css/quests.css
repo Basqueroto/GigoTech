@@ -1,0 +1,63 @@
+#ffD {
+    width: 80vw;
+    margin-top: 40px;
+}
+
+.pergunt {
+    background-color: #2a2965;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #fff;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.mainQ {
+    display: flex;
+    justify-content: center;
+}
+
+.alternativ {
+    display: flex;
+    gap: 15px;
+}
+
+.divAlter {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btnFF {
+    transition: 0.5s;
+    margin-top: 20px;
+    background-color: #2a2965;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    border: 1px solid #2a2965;
+}
+
+.btnFF:hover {
+    background-color: #fff;
+    color: #2a2965;
+    border: 1px solid #2a2965;
+}
+
+#sair {
+    transition: 0.5s;
+    margin-top: 20px;
+    background-color: #2a2965;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    border: 1px solid #2a2965;
+}
+
+#sair:hover {
+    background-color: #fff;
+    color: #2a2965;
+    border: 1px solid #2a2965;
+}

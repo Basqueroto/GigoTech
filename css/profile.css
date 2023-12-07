@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    justify-content: center !important;
+    text-align: center;
+}
+.photo-profile{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    transition: transform .5s;
+}
+.photo-profile:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.photo-profile div{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    visibility: hidden;
+}
+.photo-profile:hover .photo-profile div{
+    z-index: 1000;
+    visibility: visible;
+}
+.social-medias{
+    letter-spacing: 1rem;
+    font-size: 1.8rem;
+}
+.social-medias i{
+    transition: .5s;
+}
+.social-medias i:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+}

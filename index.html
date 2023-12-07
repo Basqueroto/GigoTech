@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/3143d98b09.js" crossorigin="anonymous"></script>
+    <title>GIGOTECH</title>
+</head>
+<body>
+    <div class="main">
+        <img class="logo" id="logo2" src="img/logo.png" alt="">
+
+        <div class="left">
+            <img class="logo" id="logo" src="img/logo.png" alt="">
+            <img id="illustration" src="img/left.png" width="65%" style="margin-left: 7px;" alt="content">
+            <img id="pet" src="img/dolph.png" width="50%" alt="content">
+            <div class="quest">
+                <div>
+                    <div >Já possui uma conta? Faça o</div>
+                    <button class="questbtn">
+                        LOG IN
+                    </button>
+                </div>
+                <div>
+                    Ainda não possui um cadastro?
+                    <button class="questbtn">
+                        SIGN UP
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="sign">
+            <input type="checkbox" name="" id="chk">
+
+            <div class="signup">
+                <label  aria-hidden="true" for="chk">Sign Up</label>
+                <div class="brands">
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <form action="" id="cadform">
+                    <div class="input">
+                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <input id="username" name="username" placeholder="Username" type="text">
+                    </div>
+                    <div class="input">
+                        <i class="far fa-envelope"></i>
+                        <input id="email" name="email" placeholder="Email" type="text">
+                    </div>
+                    <div class="input">
+                        <i class="fas fa-lock"></i>
+                        <input id='senha' name="senha" placeholder="Password" type="password">
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+
+            <div class="login">
+                <label  aria-hidden="true" for="chk">Log In</label>
+                <div class="brands">
+                    <i class="fa-brands fa-google"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <form action="" id="loginForm">
+                    <div class="input">
+                        <i class="fa fa-user-circle-o"></i>
+                        <input id="user" name="user" placeholder="Username or Email" type="text">
+                    </div>
+                    <div class="input">
+                        <i class="fas fa-lock"></i>
+                        <input id='senha' name="senha" placeholder="Password" type="password">
+                    </div>
+                    <button type="submit">Log In</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script>
+    let btns = document.querySelectorAll(".questbtn")
+    let chk = document.getElementById("chk")
+
+    for(i=0; i<btns.length;i++){
+        btns[i].addEventListener('click', ()=>{
+            chk.click()
+        })
+    }
+    chk.addEventListener("change", ()=>{
+        if(chk.checked == true){
+            document.querySelector(".quest div:nth-child(1)").style.display = 'none'
+            document.querySelector(".quest div:nth-child(2)").style.display = 'block'
+        }
+        else{
+            document.querySelector(".quest div:nth-child(1)").style.display = 'block'
+            document.querySelector(".quest div:nth-child(2)").style.display = 'none'
+        }
+    })
+</script>
+<script src="script/entrar.js"></script>
+
+</html>

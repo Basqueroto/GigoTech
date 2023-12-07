@@ -1,0 +1,60 @@
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.16em solid #7551d7;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #7551d7cb;
+}
+input[type="radio"]:focus{
+    outline: none;
+}
+input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+.sec-aula{
+    padding: 3rem;
+    border: 2px solid #7551d7cb;
+    border-radius: 20px;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+}
+.options{
+    color: #7551d7;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.opt label{
+    margin-left: .3rem;
+}
+.opt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.content p{
+    margin: 0;
+    padding: 0;
+}
+.quest p{
+    color: #7551d7;
+    margin-bottom: 1rem;
+}

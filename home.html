@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.png">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/mk_charts.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="https://kit.fontawesome.com/3143d98b09.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div>
+                <label for="ck-lmenu"><i style="float: left;" id="lmenu-icon" class="fa-solid fa-bars"></i></label>
+                <input type="checkbox" name="" id="ck-lmenu" style="display: none;">
+                <img class="logo" src="img/logotipo.png" alt="">
+            </div>
+            <a href="profile.html"><div style="background-image: url(img/25813.png);" class="profile"></div></a>
+        </nav>
+        <div class="filler"></div>
+        <div style="overflow: hidden;" class="lmenu">
+            <div class="menu">
+                <span class="sec">Menu</span>
+                <ul>
+                    <a class="user-menu-icon" href="home.html"><li><i class="fa-solid fa-user"></i>Perfil</li></a>
+                    <a href="home.html"><li><i class="fa-solid fa-house"></i>Início</li></a>
+                    <a href="plano.html"><li><i class="fa-solid fa-calendar-days"></i>Plano de Estudos</li></a>
+                    <a href="materias.html"><li><i class="fa-solid fa-book"></i>Matérias</li></a>
+                </ul>
+            </div>   
+            <div class="salas">
+                <span class="sec">Salas</span>
+                <ul class="ul-salas">
+                    <a href="sala.html"><li><div style="background-image: url(img/25813.png);" class="capa"></div><div class="titulo">3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI</div></li></a>
+                    <a href="sala.html"><li><div style="background-image: url(img/25813.png);" class="capa"></div><div class="titulo">3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI</div></li></a>
+                    <a href="sala.html"><li><div style="background-image: url(img/25813.png);" class="capa"></div><div class="titulo">3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI</div></li></a>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main" >
+        
+        <div class="container">
+            <div class="mat-percent">
+                <div><h2>Seu Progresso Nos Estudos</h2></div>
+                <div id="circle-percent" class="mkCharts" data-size="200" data-color="#7551d7cb" data-percent="95" data-stroke="3"></div>
+                <div class="div-mats">
+                    <div class="mats">
+                        <div data-percent="33" class="btn">Filosofia</div>
+                        <div data-percent="12" class="btn focus">Ciências</div>
+                        <div data-percent="98" class="btn">Geografia</div>
+                        <div data-percent="33" class="btn">Matemática</div>
+                    </div>
+                </div>
+            </div>
+
+            <p>Bem Vindo!, a Gigotech está aqui para tornar o estudo mais acessível e envolvente. Nossa plataforma digital oferece conteúdo personalizado, trilhas de aprendizado adaptativas e incentiva a colaboração entre estudantes. Preparem-se para uma jornada de estudo inspiradora com a Gigotech!</p>
+
+            <section class="sect-cont" id="planHj">
+                <h2>Plano de Estudos</h2>
+                <h3>Programação do Dia</h3>
+                <div class="">
+                    <ul>
+
+                    </ul>
+                </div>
+            </section>
+
+            <section class="sect-cont" id="last-tk">
+                <h2>Últimas Tarefas Atribuídas</h2>
+                <div class="tks">
+
+                    <div class="tk">
+                        <a onclick="fisica()">
+                            <div class="last-tk-top">
+                                <div style="background-image: url(img/25813.png);" class="capa"></div>
+                                <div class="limiter"><div class="lstk-titulo">3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SE</div></div>
+                            </div>
+                            <div class="last-tk-bottom">
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tk">
+                        <a href="">
+                            <div class="last-tk-top">
+                                <div style="background-image: url(img/25813.png);" class="capa"></div>
+                                <div class="limiter"><div class="lstk-titulo">TURMA-A ASSINTENTE TÉCNICO D</div></div>
+                            </div>
+                            <div class="last-tk-bottom">
+                                
+                            </div>
+                        </a>
+                    </div>
+   
+                </div>                
+            </section>
+
+            <section id="sec-mat">
+                <h2>Nossas Matérias</h2>
+                <div id="materias">
+                    <a onclick="biologia()"><div class="mat">Biologia <i class="fa-solid fa-leaf"></i></div></a>
+                    <a onclick="quimica()"><div class="mat">Química <i class="fa-solid fa-flask"></i></div></a>
+                    <a onclick="fisica()"><div class="mat">Física <i class="fa-solid fa-atom"></i></div></a>
+                    <a onclick="matematica()"><div class="mat">Matemática <i class="fa-solid fa-square-root-variable"></i></div></a>
+                    <a onclick="portugues()"><div class="mat">Língua <br>Portuguesa <i class="fa-solid fa-book-open"></i></div></a>
+                    <a onclick="arte()"><div class="mat">arte<i class="fa-solid fa-book-bookmark"></i></div></a>
+                    <a onclick="historia()"><div class="mat">História <i class="fa-solid fa-landmark-dome"></i></div></a>
+                    <a onclick="ingles()"><div class="mat">Inglês <i class="fa-solid fa-language"></i> </div></a>
+                    <a onclick="sociologia()"><div class="mat">Sociologia <i class="fa-solid fa-people-group"></i></div></a>
+                </div>
+            </section>
+            
+        </div>
+ 
+    </main>
+
+    <footer >
+        <div id="footer">
+            <div>GIGOTECH®</div>
+            <label for="contact" class="ct">Contate - nos</label>
+        </div>
+        <input type="checkbox" name="contact" id="contact">
+        <div class="form-contato">
+            <form action="" method="post">
+
+                <div>
+                    <label for="name">Nome</label>
+                    <input type="text" >
+                </div>
+
+                <div>
+                    <label for="name">Email</label>
+                    <input type="text" >
+                </div>
+
+                <div>
+                    <label for="name">Mensagem</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </footer>
+</body>
+<script>
+    var lmenuIcon = document.getElementById('lmenu-icon')
+    var ckMenu = document.getElementById('ck-lmenu')
+    var lmenu = document.querySelector('.lmenu')
+    var main = document.getElementById('main')
+    var footer = document.querySelector('footer')
+    var filler = document.querySelector('.filler')
+    var nav = document.querySelector('.nav')
+    var matsBtns = document.querySelectorAll('.mats .btn')
+    var circlePercent = document.getElementById('circle-percent')
+    var mats = document.querySelector('.mats')
+
+var selected = 1
+    for(let i=0; i< matsBtns.length; i++){
+        matsBtns[i].addEventListener('click', ()=>{
+            var index = Array.prototype.indexOf.call(mats.children, matsBtns[i]);
+            if(index > selected){
+                mats.append(mats.children[0])
+            }else if(index < selected){
+                mats.prepend(mats.children[mats.children.length-1])
+            }
+            else{
+                index = selected
+            }
+            var percent = matsBtns[i].getAttribute('data-percent')
+            circlePercent.setAttribute('data-percent', percent)
+            for(let i=0;i<charts.length;i++) {
+                let chart = charts[i];
+                let percent = chart.dataset.percent;
+                let color = ('color' in chart.dataset) ? chart.dataset.color : "#2F4F4F";
+                let size = ('size' in chart.dataset) ? chart.dataset.size : "100";
+                let stroke = ('stroke' in chart.dataset) ? chart.dataset.stroke : "1";
+                charts[i].innerHTML = createCircleChart(percent, color, size, stroke);
+            }
+   
+            document.querySelector('.focus').classList.remove('focus')
+            matsBtns[i].classList.add('focus')
+
+        })
+    }
+</script>
+<script src="script/main.js"></script>
+<script src="script/mk_charts.js"></script>
+<script src="script/token.js"></script>
+</html>

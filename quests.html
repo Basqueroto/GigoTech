@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.png">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/mk_charts.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/quests.css">
+    <script src="https://kit.fontawesome.com/3143d98b09.js" crossorigin="anonymous"></script>
+    <title>Questão</title>
+</head>
+<body id="charge" onload="charge()">
+    <header>
+        <nav class="nav">
+            <div>
+                <label for="ck-lmenu"><i style="float: left;" id="lmenu-icon" class="fa-solid fa-bars"></i></label>
+                <input type="checkbox" name="" id="ck-lmenu" style="display: none;">
+                <img class="logo" src="img/logotipo.png" alt="">
+            </div>
+            <a href="profile.html"><div style="background-image: url(img/25813.png);" class="profile"></div></a>
+        </nav>
+        <div class="filler"></div>
+        <div style="overflow: hidden;" class="lmenu">
+            <div class="menu">
+                <span class="sec">Menu</span>
+                <ul>
+                    <a class="user-menu-icon" href="home.html"><li><i class="fa-solid fa-user"></i>Perfil</li></a>
+                    <a href="home.html"><li><i class="fa-solid fa-house"></i>Início</li></a>
+                    <a href="plano.html"><li><i class="fa-solid fa-calendar-days"></i>Plano de Estudos</li></a>
+                    <a href="materias.html"><li><i class="fa-solid fa-book"></i>Matérias</li></a>
+                </ul>
+            </div>   
+            <div class="salas">
+                <span class="sec">Salas</span>
+                <ul class="ul-salas">
+                    <a href="sala.html"><li><div style="background-image: url(img/25813.png);" class="capa"></div><div class="titulo">3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI</div></li></a>
+                    <a href="sala.html"><li><div style="background-image: url(img/25813.png);" class="capa"></div><div class="titulo">3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI</div></li></a>
+                    <a href="sala.html"><li><div style="background-image: url(img/25813.png);" class="capa"></div><div class="titulo">3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI3EM - FÍSICA NATHAN SESI</div></li></a>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main" class="mainQ">
+        <form id="ffD">
+            
+        </form>
+    </main>
+
+    <footer >
+        <div id="footer">
+            <div>GIGOTECH®</div>
+            <label for="contact" class="ct">Contate - nos</label>
+        </div>
+        <input type="checkbox" name="contact" id="contact">
+        <div class="form-contato">
+            <form action="" method="post">
+
+                <div>
+                    <label for="name">Nome</label>
+                    <input type="text" >
+                </div>
+
+                <div>
+                    <label for="name">Email</label>
+                    <input type="text" >
+                </div>
+
+                <div>
+                    <label for="name">Mensagem</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </footer>
+</body>
+<script>
+    var lmenuIcon = document.getElementById('lmenu-icon')
+    var ckMenu = document.getElementById('ck-lmenu')
+    var lmenu = document.querySelector('.lmenu')
+    var main = document.getElementById('main')
+    var footer = document.querySelector('footer')
+    var filler = document.querySelector('.filler')
+    var nav = document.querySelector('.nav')
+    var matsBtns = document.querySelectorAll('.mats .btn')
+    var circlePercent = document.getElementById('circle-percent')
+    var mats = document.querySelector('.mats')
+
+var selected = 1
+    for(let i=0; i< matsBtns.length; i++){
+        matsBtns[i].addEventListener('click', ()=>{
+            var index = Array.prototype.indexOf.call(mats.children, matsBtns[i]);
+            if(index > selected){
+                mats.append(mats.children[0])
+            }else if(index < selected){
+                mats.prepend(mats.children[mats.children.length-1])
+            }
+            else{
+                index = selected
+            }
+            var percent = matsBtns[i].getAttribute('data-percent')
+            circlePercent.setAttribute('data-percent', percent)
+            for(let i=0;i<charts.length;i++) {
+                let chart = charts[i];
+                let percent = chart.dataset.percent;
+                let color = ('color' in chart.dataset) ? chart.dataset.color : "#2F4F4F";
+                let size = ('size' in chart.dataset) ? chart.dataset.size : "100";
+                let stroke = ('stroke' in chart.dataset) ? chart.dataset.stroke : "1";
+                charts[i].innerHTML = createCircleChart(percent, color, size, stroke);
+            }
+   
+            document.querySelector('.focus').classList.remove('focus')
+            matsBtns[i].classList.add('focus')
+
+        })
+    }
+</script>
+<script src="script/main.js"></script>
+<script src="script/mk_charts.js"></script>
+<script src="script/token.js"></script>
+</html>
